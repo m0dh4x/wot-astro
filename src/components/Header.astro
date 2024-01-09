@@ -1,0 +1,43 @@
+---
+import { cn } from "@/lib/utils";
+import { UserNav } from "./react/UserNav.tsx";
+import { ThemeSwitcher } from "./react/ThemeSwitcher";
+---
+
+<div class="hidden flex-col dark:text-white md:flex">
+  <div class="border-b">
+    <div class="flex h-16 items-center px-4">
+      <nav class="flex items-center space-x-4 lg:space-x-6">
+        <a
+          href="/examples/dashboard"
+          class="text-md font-medium transition-colors hover:text-primary"
+        >
+          Overview
+        </a>
+        <a
+          href="/tanks"
+          class="text-md font-medium text-muted-foreground transition-colors hover:text-primary"
+        >
+          Tanks
+        </a>
+        <a
+          href="/moe"
+          class="text-md font-medium text-muted-foreground transition-colors hover:text-primary"
+        >
+          Marks of Excellence
+        </a>
+        <a
+          href="/mom"
+          class="text-md font-medium text-muted-foreground transition-colors hover:text-primary"
+        >
+          Marks of Mastery
+        </a>
+      </nav>
+      <div class="ml-auto flex items-center space-x-4 gap-7">
+        <!-- <Search /> -->
+        <ThemeSwitcher client:load />
+        <UserNav client:load />
+      </div>
+    </div>
+  </div>
+</div>
